@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>customer complaint</title>
+</head>
+<body>
+ 
+    <h1>Consumer Complaint Data</h1>
+
+    
+    {% for row in rows %}
+    <p>Complaints Details: 
+       <b>{{row["complaint_ID"]}}</b> | 
+       {{row["date_received"]}} | 
+        {{ row["submitted"]}} | 
+       {{row['timely_response']}}	| 
+       {{row["company_name"]}} |
+        {{ row["company_response"]}} |
+       {{row['products']}}	
+    </p>
+    {% endfor %}
+
+</body>
+</html>
